@@ -240,13 +240,26 @@ document.addEventListener("DOMContentLoaded", () => {
   checkUrlParams();
 });
 
-// Menú Móvil
+// Menú Móvil & Desplegable Glassmorphism
 function initMobileMenu() {
   const toggle = document.getElementById("mobileToggle");
   const menu = document.getElementById("navMenu");
   if (toggle && menu) {
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       menu.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (menu.classList.contains("active") && !menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove("active");
+      }
+    });
+
+    menu.querySelectorAll(".nav-page-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
     });
   }
 }
