@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Asistente &amp; Guía Rápida | Emciel Nails Studio</title>
+  <meta name="description" content="Descubre el servicio ideal para tus uñas en 3 pasos rápidos. Guía de Nivelación Rubber, Polygel y Manicura Rusa en Puebla.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Pure Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span>Agenda tu cita por WhatsApp al <strong>22-21-03-80-84</strong> | Instagram: <strong>@emciel.nails</strong></span>
+      <a href="https://wa.me/522221038084" target="_blank" class="announcement-link"><i class="fa-brands fa-whatsapp"></i> Agendar Cita</a>
+    </div>
+  </div>
+
+  <!-- Integrated Main Header -->
+  <header class="main-header" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-mark">E</span>
+        <div class="logo-text">
+          <span class="brand-name">EMCIEL NAILS</span>
+          <span class="brand-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Minimal Nav -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-page-btn"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="asistente.html" class="nav-page-btn active"><i class="fa-solid fa-wand-magic-sparkles"></i> Asistente &amp; Guía</a>
+        <a href="galeria.html" class="nav-page-btn"><i class="fa-regular fa-image"></i> Galería 3D</a>
+        <a href="cotizador.html" class="nav-page-btn highlight-link"><i class="fa-solid fa-calculator"></i> Menú &amp; Cotizador Live</a>
+        <a href="politicas.html" class="nav-page-btn"><i class="fa-solid fa-shield-heart"></i> Políticas</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://instagram.com/emciel.nails" target="_blank" class="social-btn" title="Instagram @emciel.nails">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="cotizador.html" class="cta-header-btn">
+          Cotizar Set <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menú">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner-section">
+      <div class="container text-center">
+        <span class="sub-title">Asesoría Studio</span>
+        <h1 class="section-title">Descubre tu Servicio Ideal</h1>
+        <p class="section-desc">Responde 3 preguntas breves y obtén la técnica exacta para tus uñas.</p>
+      </div>
+    </section>
+
+    <!-- Quiz Wizard Section -->
+    <section class="section quiz-wizard-section" id="cuestionario">
+      <div class="container">
+        <div class="quiz-card">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill" style="width: 33%;"></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="quiz-step-pane active" id="quizStep1">
+            <span class="quiz-step-badge">Paso 1 de 3</span>
+            <h3>¿Qué buscas para tus uñas hoy?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" onclick="answerQuiz(1, 'natural')">
+                <i class="fa-solid fa-shield-heart"></i>
+                <strong>Protección Natural</strong>
+                <small>Fortalecer uña corta sin extensiones.</small>
+              </button>
+              <button class="quiz-option-btn" onclick="answerQuiz(1, 'medium')">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <strong>Largo Sutil</strong>
+                <small>Estilizado y cómodo diario.</small>
+              </button>
+              <button class="quiz-option-btn" onclick="answerQuiz(1, 'long')">
+                <i class="fa-solid fa-crown"></i>
+                <strong>Largo Escultural XL</strong>
+                <small>Máximo impacto visual.</small>
+              </button>
+              <button class="quiz-option-btn" onclick="answerQuiz(1, 'retoque')">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <strong>Retoque de Set</strong>
+                <small>Mantenimiento y rebalanceo de tu set anterior.</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="quiz-step-pane" id="quizStep2">
+            <span class="quiz-step-badge">Paso 2 de 3</span>
+            <h3>¿Cuál es tu rutina de actividades?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" onclick="answerQuiz(2, 'daily')">
+                <i class="fa-solid fa-keyboard"></i>
+                <strong>Oficina / Celular constante</strong>
+                <small>Requiere flexibilidad y ligereza.</small>
+              </button>
+              <button class="quiz-option-btn" onclick="answerQuiz(2, 'active')">
+                <i class="fa-solid fa-dumbbell"></i>
+                <strong>Trabajo manual / Actividad alta</strong>
+                <small>Requiere estructura de alta dureza.</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="quiz-step-pane" id="quizStep3">
+            <span class="quiz-step-badge">Paso 3 de 3</span>
+            <h3>¿Qué acabado prefieres?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" onclick="answerQuiz(3, 'nude')">
+                <i class="fa-solid fa-sun"></i>
+                <strong>Nude Elegante</strong>
+                <small>Tonalidades neutras y limpia presencia.</small>
+              </button>
+              <button class="quiz-option-btn" onclick="answerQuiz(3, 'glam')">
+                <i class="fa-solid fa-gem"></i>
+                <strong>Efectos Especiales</strong>
+                <small>Ojo de gato, cromo o cristales.</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Result Pane -->
+          <div class="quiz-step-pane" id="quizResultPane">
+            <div class="quiz-result-box text-center">
+              <span class="sub-title">Recomendación Personalizada</span>
+              <h3 id="quizResultTitle">Nivelación Rubber</h3>
+              <p id="quizResultDesc">Ideal para mantener tus uñas fuertes con acabado pulcro y natural.</p>
+              <div class="quiz-result-actions">
+                <button class="btn btn-primary" id="btnQuizApply">
+                  <i class="fa-solid fa-calculator"></i> Cotizar Servicio
+                </button>
+                <button class="btn btn-secondary" onclick="restartQuiz()">
+                  <i class="fa-solid fa-rotate-left"></i> Reiniciar
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual 2-Column Mobile / 3-Column Desktop Cards Grid -->
+    <section class="section glossary-section" id="glosario">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-title">Guía de Servicios</span>
+          <h2 class="section-title">Técnicas Explicadas al Instante</h2>
+          <p class="section-desc">Entiende cada opción de forma directa sin párrafos pesados.</p>
+        </div>
+
+        <div class="glossary-grid">
+          
+          <div class="glossary-card">
+            <div>
+              <div class="g-header">
+                <i class="fa-solid fa-hand magenta-icon"></i>
+                <h4>Manicura Rusa</h4>
+              </div>
+              <p>Limpieza anatómica profunda con torno. Esmaltado pegado a raíz para máximo crecimiento invisible.</p>
+            </div>
+            <span class="g-tag">Incluida en Servicios</span>
+          </div>
+
+          <div class="glossary-card">
+            <div>
+              <div class="g-header">
+                <i class="fa-solid fa-shield-halved magenta-icon"></i>
+                <h4>Nivelación Rubber</h4>
+              </div>
+              <p>Gel estructural engomado que fortalece y empareja uña natural corta contra quiebres.</p>
+            </div>
+            <span class="g-tag">Desde $200 MXN</span>
+          </div>
+
+          <div class="glossary-card">
+            <div>
+              <div class="g-header">
+                <i class="fa-solid fa-wand-sparkles magenta-icon"></i>
+                <h4>Polygel</h4>
+              </div>
+              <p>Fórmula híbrida ultra ligera para extensiones de uña cómodas y de apariencia natural.</p>
+            </div>
+            <span class="g-tag">Desde $290 MXN</span>
+          </div>
+
+          <div class="glossary-card">
+            <div>
+              <div class="g-header">
+                <i class="fa-solid fa-layer-group magenta-icon"></i>
+                <h4>Dual System</h4>
+              </div>
+              <p>Moldes simétricos que consiguen superficie lisa y curvatura perfecta en menor tiempo.</p>
+            </div>
+            <span class="g-tag">Desde $350 MXN</span>
+          </div>
+
+          <div class="glossary-card">
+            <div>
+              <div class="g-header">
+                <i class="fa-solid fa-crown magenta-icon"></i>
+                <h4>Uñas Esculturales</h4>
+              </div>
+              <p>Construidas sobre molde con acrílico puro. Máxima resistencia y forma a tu medida.</p>
+            </div>
+            <span class="g-tag">Desde $290 MXN</span>
+          </div>
+
+          <div class="glossary-card">
+            <div>
+              <div class="g-header">
+                <i class="fa-solid fa-arrows-rotate magenta-icon"></i>
+                <h4>Retoque c/ Manicura</h4>
+              </div>
+              <p>Mantenimiento y rebalanceo de tu set de acrílico o esculturales para conservar el largo perfecto.</p>
+            </div>
+            <span class="g-tag">Desde $280 MXN</span>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="cotizador.html" class="btn btn-primary">
+            <i class="fa-solid fa-calculator"></i> Ir al Cotizador Live
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer & Contact -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-mark">E</span>
+            <div class="logo-text">
+              <span class="brand-name">EMCIEL NAILS</span>
+              <span class="brand-sub">STUDIO</span>
+            </div>
+          </a>
+          <p class="footer-desc">Estudio especializado en estética avanzada de uñas, manicura rusa, Polygel y Nivelación Rubber en Puebla.</p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="asistente.html">Asistente &amp; Guía</a></li>
+            <li><a href="galeria.html">Galería 3D</a></li>
+            <li><a href="cotizador.html">Menú &amp; Cotizador</a></li>
+            <li><a href="politicas.html">Políticas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-hours-col">
+          <h4>Contacto &amp; Citas</h4>
+          <p><i class="fa-regular fa-clock magenta-icon"></i> <strong>Lunes a Sábado:</strong> 10:00 AM - 7:00 PM</p>
+          <p><i class="fa-solid fa-phone magenta-icon"></i> <strong>Agenda Directa:</strong> 22-21-03-80-84</p>
+          <p><i class="fa-solid fa-location-dot magenta-icon"></i> Previa Cita Confirmada • Puebla</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Emciel Nails Studio. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions Desktop -->
+  <div class="floating-actions">
+    <a href="cotizador.html" class="floating-ticket-btn" title="Ver Cotizador de Cita">
+      <i class="fa-solid fa-receipt"></i>
+      <span class="floating-total-badge" id="floatingTotalBadge">$0</span>
+    </a>
+    <a href="https://wa.me/522221038084" target="_blank" class="floating-wa-btn" title="Agendar cita en WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Bottom App Dock Navigation Bar -->
+  <nav class="mobile-bottom-dock">
+    <div class="mobile-dock-container">
+      <a href="index.html" class="dock-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+      </a>
+      <a href="asistente.html" class="dock-item active">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Asistente</span>
+      </a>
+      <a href="galeria.html" class="dock-item">
+        <i class="fa-regular fa-image"></i>
+        <span>Galería 3D</span>
+      </a>
+      <a href="cotizador.html" class="dock-item dock-cta">
+        <i class="fa-solid fa-calculator"></i>
+        <span>Cotizar</span>
+      </a>
+      <a href="https://wa.me/522221038084" target="_blank" class="dock-item">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

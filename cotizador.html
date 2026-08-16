@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Menú Oficial &amp; Cotizador Live | Emciel Nails Studio</title>
+  <meta name="description" content="Calcula el costo exacto de tus uñas en tiempo real, elige tu largo ideal, simula tonos y agéndalo directamente a WhatsApp con Emciel Nails Studio.">
+  <meta name="keywords" content="cotizador de uñas, precios de uñas, nivelacion rubber precio, polygel precio, esculturales precio, emciel nails">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Pure Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span>Agenda tu cita por WhatsApp al <strong>22-21-03-80-84</strong> | Instagram: <strong>@emciel.nails</strong></span>
+      <a href="https://wa.me/522221038084" target="_blank" class="announcement-link"><i class="fa-brands fa-whatsapp"></i> Agendar Cita Directa</a>
+    </div>
+  </div>
+
+  <!-- Integrated Main Header & Multi-Page Navigation -->
+  <header class="main-header" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-mark">E</span>
+        <div class="logo-text">
+          <span class="brand-name">EMCIEL NAILS</span>
+          <span class="brand-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Multi-Page Capsule Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-page-btn"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="asistente.html" class="nav-page-btn"><i class="fa-solid fa-wand-magic-sparkles"></i> Asistente &amp; Guía</a>
+        <a href="galeria.html" class="nav-page-btn"><i class="fa-regular fa-image"></i> Galería 3D</a>
+        <a href="cotizador.html" class="nav-page-btn active highlight-link"><i class="fa-solid fa-calculator"></i> Menú &amp; Cotizador Live</a>
+        <a href="politicas.html" class="nav-page-btn"><i class="fa-solid fa-shield-heart"></i> Políticas</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://instagram.com/emciel.nails" target="_blank" class="social-btn" title="Instagram @emciel.nails">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#cotizadorApp" class="cta-header-btn">
+          Calcular Cita <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menú">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner-section">
+      <div class="container text-center">
+        <span class="sub-title">Precios Transparentes</span>
+        <h1 class="section-title">Menú Oficial &amp; Cotizador Live</h1>
+        <p class="section-desc">Calcula tu costo exacto en tiempo real y agéndalo directamente por WhatsApp.</p>
+      </div>
+    </section>
+
+    <!-- Quick Category Filter Bar -->
+    <section class="category-bar-section">
+      <div class="container">
+        <div class="category-pills" id="categoryFilter">
+          <button class="cat-pill active" data-filter="all"><i class="fa-solid fa-border-all"></i> Todos</button>
+          <button class="cat-pill" data-filter="esculturales"><i class="fa-solid fa-crown"></i> Esculturales / Retoque</button>
+          <button class="cat-pill" data-filter="semipermanente"><i class="fa-solid fa-paint-brush"></i> Gel Semipermanente</button>
+          <button class="cat-pill" data-filter="pedicura"><i class="fa-solid fa-spa"></i> Pedicura</button>
+          <button class="cat-pill" data-filter="rubber"><i class="fa-solid fa-shield-halved"></i> Rubber</button>
+          <button class="cat-pill" data-filter="polygel"><i class="fa-solid fa-wand-sparkles"></i> Polygel</button>
+          <button class="cat-pill" data-filter="dual"><i class="fa-solid fa-layer-group"></i> Dual System</button>
+          <button class="cat-pill" data-filter="manicura"><i class="fa-solid fa-hand"></i> Manicura</button>
+          <button class="cat-pill" data-filter="bano"><i class="fa-solid fa-droplet"></i> Baño Acrílico</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Services Catalog Grid (2 Columns Mobile / 3 Columns Desktop) -->
+    <section class="section catalog-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-title">Catálogo Oficial</span>
+          <h2 class="section-title">Servicios &amp; Precios Claros</h2>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <!-- Populated by JS dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Cotizador Calculator Section -->
+    <section class="section cotizador-section" id="cotizadorApp">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-title">Calculadora Inteligente</span>
+          <h2 class="section-title">Cotizador Emciel Live</h2>
+        </div>
+
+        <div class="cotizador-app">
+          <!-- Step Form Left -->
+          <div class="cotizador-form-container">
+            
+            <!-- Step 1: Base Service Visual Selector -->
+            <div class="form-step-card">
+              <div class="step-header">
+                <span class="step-num">1</span>
+                <div>
+                  <h3>Servicio Base Seleccionado</h3>
+                  <small>Toca para abrir el catálogo visual de opciones</small>
+                </div>
+              </div>
+
+              <!-- Selected Service Visual Display Box -->
+              <div class="selected-service-display-card" id="selectedServiceCard" onclick="openServiceModal()">
+                <div class="ssd-left">
+                  <span class="ssd-badge" id="ssdBadge">Catálogo Visual</span>
+                  <h4 id="ssdTitle">Seleccionar Servicio Base</h4>
+                  <p id="ssdSub">Haz clic para elegir Esculturales, Gel Semipermanente, Pedicura, Rubber...</p>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" id="ssdBtn">
+                  <i class="fa-solid fa-grid-2"></i> Elegir Servicio
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Extras & Personalización + Asesoría de Diseño Banner -->
+            <div class="form-step-card">
+              <div class="step-header">
+                <span class="step-num">2</span>
+                <div>
+                  <h3>Personalización de Extras y Nail Art</h3>
+                  <small>Agrega efectos, tonos extra o cristales</small>
+                </div>
+              </div>
+
+              <!-- Banner de Asesoría de Diseño por Foto -->
+              <div class="design-consult-banner">
+                <div class="dcb-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="dcb-content">
+                  <h4>¿Tienes una foto de referencia y no sabes cómo cotizarla?</h4>
+                  <p>Selecciona tu servicio base y envíanos la foto de tu diseño a WhatsApp. Evaluamos los efectos exactos por ti sin costo extra.</p>
+                </div>
+                <a href="https://wa.me/522221038084?text=Hola%20Emciel%20Nails,%20tengo%20una%20foto%20de%20dise%C3%B1o%20y%20me%20gustar%C3%ADa%20que%20me%20asesoren%20para%20cotizarla." target="_blank" class="dcb-btn shimmer-btn">
+                  <i class="fa-brands fa-whatsapp"></i> Asesoría por Foto
+                </a>
+              </div>
+
+              <div class="extras-search-bar" style="position: relative; margin-bottom: 0.85rem;">
+                <i class="fa-solid fa-search" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #888;"></i>
+                <input type="text" id="extraSearchInput" style="width: 100%; padding: 0.5rem 0.5rem 0.5rem 2rem; border-radius: 8px; border: 1px solid var(--c-rose-light);" placeholder="Buscar efecto (ej. French, Ojo de gato, Cristales...)">
+              </div>
+
+              <!-- Quick Extras 2-Column Grid -->
+              <div class="extras-interactive-grid" id="extrasGridContainer">
+                <!-- Dynamically populated extra tiles -->
+              </div>
+            </div>
+
+            <!-- Step 3: Client Info -->
+            <div class="form-step-card">
+              <div class="step-header">
+                <span class="step-num">3</span>
+                <div>
+                  <h3>Información de Agendado</h3>
+                  <small>Opcional para tu ticket de WhatsApp</small>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0.75rem;">
+                <label for="clientName" style="display: block; font-size: 0.8rem; font-weight: 700;">Tu Nombre:</label>
+                <input type="text" id="clientName" style="width: 100%; padding: 0.5rem; border-radius: 8px; border: 1px solid var(--c-rose-light);" placeholder="Ej. María López">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0.75rem;">
+                <label for="preferredDate" style="display: block; font-size: 0.8rem; font-weight: 700;">Horario Preferido:</label>
+                <input type="text" id="preferredDate" style="width: 100%; padding: 0.5rem; border-radius: 8px; border: 1px solid var(--c-rose-light);" placeholder="Ej. Sábado 4:00 PM">
+              </div>
+
+              <div class="form-group">
+                <label for="clientNotes" style="display: block; font-size: 0.8rem; font-weight: 700;">Notas o Link de Foto de Diseño:</label>
+                <textarea id="clientNotes" style="width: 100%; padding: 0.5rem; border-radius: 8px; border: 1px solid var(--c-rose-light); height: 60px;" placeholder="Ej. Llevo foto de diseño con tono nude y mariposas..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ticket Receipt Sticky Right / Mobile Overlay -->
+          <div class="cotizador-receipt-container">
+            <div class="ticket-card" id="ticketCard">
+              <div class="ticket-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <div class="ticket-brand" style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span class="t-logo" style="width: 28px; height: 28px; border-radius: 50%; background: var(--c-magenta); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">E</span>
+                  <div>
+                    <strong style="display: block; font-size: 0.85rem;">EMCIEL NAILS</strong>
+                    <small style="color: var(--c-magenta); font-size: 0.7rem; font-weight: 700;">Resumen de Cotización</small>
+                  </div>
+                </div>
+                <span class="ticket-badge" style="background: #E6F4EA; color: #137333; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 99px;">LIVE</span>
+              </div>
+
+              <div class="ticket-divider" style="border-bottom: 1px dashed var(--c-rose-light); margin: 0.5rem 0;"></div>
+
+              <div class="ticket-body" id="ticketBody">
+                <div class="empty-ticket-state text-center" style="padding: 1.5rem 0; color: #888;">
+                  <i class="fa-solid fa-receipt" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                  <p style="font-size: 0.8rem;">Selecciona un servicio base para cotizar.</p>
+                </div>
+              </div>
+
+              <div class="ticket-divider" style="border-bottom: 1px dashed var(--c-rose-light); margin: 0.5rem 0;"></div>
+
+              <div class="ticket-footer">
+                <div class="total-row" style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; margin-bottom: 0.25rem;">
+                  <span>Total Estimado:</span>
+                  <span class="total-amount" id="totalAmount" style="font-size: 1.3rem; color: var(--c-magenta);">$0 MXN</span>
+                </div>
+                <p class="total-note" style="font-size: 0.7rem; color: #888; margin-bottom: 0.85rem;">*Sujeto a evaluación de la uña.</p>
+
+                <div class="ticket-actions" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                  <button class="btn btn-whatsapp-full" id="btnWhatsappQuote">
+                    <i class="fa-brands fa-whatsapp"></i> Agendar en WhatsApp
+                  </button>
+                  <button class="btn btn-secondary-full" id="btnCopyQuote">
+                    <i class="fa-regular fa-copy"></i> Copiar Desglose
+                  </button>
+                  <button class="btn-clear" id="btnClearQuote">
+                    <i class="fa-solid fa-rotate-left"></i> Reiniciar Cotización
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Visual Service Selector Modal Window (Bottom Sheet Mobile) -->
+  <div class="service-modal-backdrop" id="serviceModalBackdrop">
+    <div class="service-modal-box">
+      <div class="service-modal-header">
+        <div>
+          <span class="sub-title">Catálogo Visual</span>
+          <h3>Elige tu Servicio Base</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeServiceModal()" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Modal Filter Tabs -->
+      <div class="modal-category-tabs" id="modalCatTabs">
+        <button class="modal-cat-btn active" data-mcat="all">Todos</button>
+        <button class="modal-cat-btn" data-mcat="esculturales">Esculturales / Retoque</button>
+        <button class="modal-cat-btn" data-mcat="semipermanente">Gel Semipermanente</button>
+        <button class="modal-cat-btn" data-mcat="pedicura">Pedicura</button>
+        <button class="modal-cat-btn" data-mcat="rubber">Rubber</button>
+        <button class="modal-cat-btn" data-mcat="polygel">Polygel</button>
+        <button class="modal-cat-btn" data-mcat="dual">Dual System</button>
+        <button class="modal-cat-btn" data-mcat="manicura">Manicura</button>
+        <button class="modal-cat-btn" data-mcat="bano">Baño Acrílico</button>
+      </div>
+
+      <!-- Modal Services 2-Column Grid -->
+      <div class="modal-services-grid" id="modalServicesGrid">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer & Contact -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-mark">E</span>
+            <div class="logo-text">
+              <span class="brand-name">EMCIEL NAILS</span>
+              <span class="brand-sub">STUDIO</span>
+            </div>
+          </a>
+          <p class="footer-desc">Estudio especializado en estética avanzada de uñas, manicura rusa, Polygel, Nivelación Rubber y arte personalizado.</p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Páginas del Sitio</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="asistente.html">Asistente &amp; Guía</a></li>
+            <li><a href="galeria.html">Galería 3D</a></li>
+            <li><a href="cotizador.html">Menú &amp; Cotizador</a></li>
+            <li><a href="politicas.html">Políticas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-hours-col">
+          <h4>Contacto &amp; Citas</h4>
+          <p><i class="fa-regular fa-clock magenta-icon"></i> <strong>Lunes a Sábado:</strong> 10:00 AM - 7:00 PM</p>
+          <p><i class="fa-solid fa-phone magenta-icon"></i> <strong>Agenda Directa:</strong> 22-21-03-80-84</p>
+          <p><i class="fa-solid fa-location-dot magenta-icon"></i> Previa Cita Confirmada</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Emciel Nails Studio. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions Desktop -->
+  <div class="floating-actions">
+    <a href="#cotizadorApp" class="floating-ticket-btn" title="Ver Cotizador de Cita">
+      <i class="fa-solid fa-receipt"></i>
+      <span class="floating-total-badge" id="floatingTotalBadge">$0</span>
+    </a>
+    <a href="https://wa.me/522221038084" target="_blank" class="floating-wa-btn" title="Agendar cita en WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Bottom App Dock Navigation Bar -->
+  <nav class="mobile-bottom-dock">
+    <div class="mobile-dock-container">
+      <a href="index.html" class="dock-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+      </a>
+      <a href="asistente.html" class="dock-item">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Asistente</span>
+      </a>
+      <a href="galeria.html" class="dock-item">
+        <i class="fa-regular fa-image"></i>
+        <span>Galería 3D</span>
+      </a>
+      <a href="cotizador.html" class="dock-item active dock-cta">
+        <i class="fa-solid fa-calculator"></i>
+        <span>Cotizar</span>
+      </a>
+      <a href="https://wa.me/522221038084" target="_blank" class="dock-item">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
